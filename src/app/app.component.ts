@@ -14,7 +14,7 @@ export class AppComponent {
     var firebaseConfig = {
       apiKey: 'AIzaSyCyGBrE5SZg-7lUPLn3o-8rr2phOfoWjHI',
       authDomain: 'ocr-angular-bookshelves-dd64e.firebaseapp.com',
-      databaseURL: 'https://ocr-angular-bookshelves-dd64e.firebaseio.com',
+      databaseURL: 'https://ocr-angular-bookshelves-dd64e.firebaseio.com/',
       projectId: 'ocr-angular-bookshelves-dd64e',
       storageBucket: 'ocr-angular-bookshelves-dd64e.appspot.com',
       messagingSenderId: '46550816932',
