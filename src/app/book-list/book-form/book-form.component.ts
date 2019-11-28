@@ -50,7 +50,9 @@ export class BookFormComponent implements OnInit {
         this.fileIsUploading = false;
         this.fileUploaded = true;
       }
-    );
+    ).catch((error) => {
+      console.log('Erreur d\'upload', error);
+    });
   }
 
   detectFiles(event) {

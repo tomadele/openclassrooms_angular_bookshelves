@@ -6,6 +6,7 @@ import * as firebase from 'firebase';
 @Injectable({
   providedIn: 'root'
 })
+
 export class BooksService {
 
   books: Book[] = [];
@@ -49,6 +50,18 @@ export class BooksService {
   }
 
   removeBook(book: Book) {
+    if (book.photo) {
+      const storageRef = firebase.storage().refFromURL(book.photo);
+      storageRef.delete().then(
+        () => {
+          console.log('Photo supprimée !');
+        }
+      ).catch(
+        (error) => {
+          console.log('Fichier non trouvé : ' + error);
+        }
+      )
+    }
     const bookIndexToRemove = this.books.findIndex(
       (bookEl) => {
           return bookEl === book;
